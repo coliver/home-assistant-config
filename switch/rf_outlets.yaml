@@ -1,0 +1,23 @@
+- platform: command_line
+  switches:
+    switch_01:
+      command_on: !secret codesend 1070387 1 180
+      command_off: !secret codesend 1070396 1 180
+
+    switch_02:
+      friendly_name: Reza Humidifier
+      command_on: !secret codesend 1070531 1 180
+      command_off: !secret codesend 1070540 1 180
+
+    switch_03:
+      command_on: !secret codesend 1070851 1 180
+      command_off: !secret codesend 1070860 1 180
+
+    switch_04:
+      command_on: !secret codesend 1072387 1 180
+      command_off: !secret codesend 1072396 1 180
+
+    switch_05:
+      friendly_name: Entertainment Center
+      command_on: !secret codesend 1078531 1 180
+      command_off: !secret codesend 1078540 1 180
