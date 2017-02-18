@@ -54,4 +54,8 @@ switches:
   name: Switches
   view: yes
   entities:
-    - switche.switch_*
+    - switche.switch_01
+    - switche.switch_02
+    - switche.switch_03
+    - switche.switch_04
+    - switche.switch_05
