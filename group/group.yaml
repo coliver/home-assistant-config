@@ -5,7 +5,6 @@ default_view:
     - group.fire
     - group.camera_one
     - group.camera_two
-    - group.switches
 
 climate:
   name: Climate
@@ -50,3 +49,9 @@ media:
     - media_player.home_group
     - media_player.family_room_amp
     - media_player.the_other_one
+
+switches:
+  name: Switches
+  view: yes
+  entities:
+    - switche.switch_*
