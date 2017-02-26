@@ -1,15 +1,17 @@
 - platform: command_line
   switches:
     switch_01:
+      friendly_name: Kitchen Audio
       command_on: /home/homeassistant/433Utils/RPi_utils/codesend 1070387 1 180
       command_off: /home/homeassistant/433Utils/RPi_utils/codesend 1070396 1 180
 
     switch_02:
-      friendly_name: Reza Humidifier
+      friendly_name: Kid's Humidifier
       command_on: /home/homeassistant/433Utils/RPi_utils/codesend 1070531 1 180
       command_off: /home/homeassistant/433Utils/RPi_utils/codesend 1070540 1 180
 
     switch_03:
+      friendly_name: Bedroom Entertainment Center
       command_on: /home/homeassistant/433Utils/RPi_utils/codesend 1070851 1 180
       command_off: /home/homeassistant/433Utils/RPi_utils/codesend 1070860 1 180
 
@@ -18,6 +20,6 @@
       command_off: /home/homeassistant/433Utils/RPi_utils/codesend 1072396 1 180
 
     switch_05:
-      friendly_name: Entertainment Center
+      friendly_name: Den Entertainment Center
       command_on: /home/homeassistant/433Utils/RPi_utils/codesend 1078531 1 180
       command_off: /home/homeassistant/433Utils/RPi_utils/codesend 1078540 1 180

@@ -11,7 +11,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
 
-  customize: !include customize.yaml
+  customize: !include_dir_merge_named customize
 
 # Show links to resources in log and frontend
 # introduction:
@@ -25,29 +25,12 @@ http:
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
 
-# Checks for available updates
 updater:
-
-# Discover some devices automatically
 discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
-
-# Enables support for tracking state changes over time.
 history:
-
-# View all events in a logbook
 logbook:
-
-# Track the sun
 sun:
-
-# Weather Prediction
-sensor:
-  platform: yr
-
-# Text to speech
 tts:
   platform: google
 
@@ -57,14 +40,57 @@ nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-camera:
-  - platform: mjpeg
-    name: Camera One
-    mjpeg_url: !secret camera_one_mjpeg_url
-  - platform: mjpeg
-    name: Camera Two
-    mjpeg_url: !secret camera_two_mjpeg_url
+#camera:
+#  - platform: mjpeg
+#    name: Camera One
+#    mjpeg_url: !secret camera_one_mjpeg_url
+#  - platform: mjpeg
+#    name: Camera Two
+#    mjpeg_url: !secret camera_two_mjpeg_url
 
-group: !include_dir_merge_named group/
+ifttt:
+  key: !secret ifttt_key
+
+media_player:
+  - platform: roku
+
+sensor: !include_dir_merge_list sensor
+
+group: !include_dir_merge_named group
 
 switch: !include_dir_merge_list switch
+
+#automation: !include_dir_merge_list automation
+
+automation:
+  - alias: Turn off humidifier in the morning
+    trigger:
+      platform: time
+      after: '07:30:00'
+    action:
+      service: switch.turn_off
+      entity_id: switch.switch_02
+
+  - alias: Turn on humidifier at night
+    trigger:
+      platform: time
+      after: '19:30:00'
+    action:
+      service: switch.turn_on
+      entity_id: switch.switch_02
+
+  - alias: Turn on entertainment center in the morning
+    trigger:
+      platform: time
+      after: '08:00:00'
+    action:
+      service: switch.turn_on
+      entity_id: switch.switch_05
+
+  - alias: Turn off entertainment center at night
+    trigger:
+      platform: time
+      after: '01:00:00'
+    action:
+      service: switch.turn_off
+      entity_id: switch.switch_05

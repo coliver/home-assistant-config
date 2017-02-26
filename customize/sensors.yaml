@@ -1,0 +1,8 @@
+sensor.moon:
+  friendly_name: 'Moon'
+  emulated_hue: False
+
+sensor.downstairs_away_mode:
+  friendly_name: 'Downstairs Away Mode'
+  emulated_hue: False
+  hidden: True

@@ -1,0 +1,51 @@
+    # Only the 'entity_id' is required.  All other options are optional.
+sensor.downstairs_thermostat_humidity:
+  icon: mdi:water-percent
+climate.downstairs:
+  friendly_name: Nest
+
+sensor.downstairs_thermostat_hvac_state:
+  icon: mdi:weather-windy
+
+sensor.entryway_nest_protect_co_status:
+  icon: mdi:skull
+
+sensor.entryway_nest_protect_smoke_status:
+  icon: mdi:smoking
+  assumed_state: false
+
+sensor.entryway_nest_protect_battery_health:
+  icon: mdi:battery-plus
+
+sensor.dark_sky_cloud_coverage:
+  friendly_name: 'Dark Sky Cloud Coverage'
+  emulated_hue: False
+  hidden: False
+  icon: mdi:weather-partlycloudy
+
+
+sensor.dark_sky_humidity:
+  friendly_name: 'Outdoor Humidity'
+  emulated_hue: False
+  hidden: False
+  icon: mdi:water-percent
+
+
+sensor.dark_sky_minutely_summary:
+  friendly_name: 'Current Conditions'
+  emulated_hue: False
+  hidden: True
+  icon: mdi:beach
+
+
+sensor.dark_sky_precip_intensity:
+  friendly_name: 'Rainfall'
+  emulated_hue: False
+  hidden: False
+  icon: mdi:weather-rainy
+
+sensor.dark_sky_temperature:
+  friendly_name: 'Outdoor Temp'
+  emulated_hue: False
+  hidden: False
+  icon: mdi:thermometer

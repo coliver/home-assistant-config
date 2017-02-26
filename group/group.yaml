@@ -1,25 +1,9 @@
 default_view:
   view: yes
   entities:
-    - group.climate
+    - group.weather
     - group.fire
-    - group.camera_one
-    - group.camera_two
 
-climate:
-  name: Climate
-  icon: mdi:nest-thermostat
-  entities:
-    - climate.downstairs
-    - sensor.downstairs_thermostat_humidity
-#      - binary_sensor.downstairs_thermostat_fan
-#      - binary_sensor.downstairs_thermostat_has_leaf
-#      - binary_sensor.downstairs_thermostat_is_locked
-#      - binary_sensor.downstairs_thermostat_is_using_emergency_heat
-#      - binary_sensor.downstairs_thermostat_online
-    - sensor.downstairs_thermostat_hvac_state
-#      - sensor.downstairs_thermostat_target
-#      - sensor.downstairs_thermostat_temperature
 fire:
   name: Fire
   icon: mdi:fire
@@ -29,17 +13,12 @@ fire:
     - sensor.entryway_nest_protect_co_status
     - sensor.entryway_nest_protect_battery_health
 
-camera_one:
-  name: Camera One
-  icon: mdi:eye-outline
-  entities:
-    - camera.camera_one
-
-camera_two:
-  name: Camera Two
-  icon: mdi:eye-outline
-  entities:
-    - camera.camera_two
+#Cameras:
+#  name: Camera One
+#  icon: mdi:eye-outline
+#  entities:
+#    - camera.camera_one
+#    - camera.camera_two
 
 media:
   name: Media Players
@@ -49,13 +28,14 @@ media:
     - media_player.home_group
     - media_player.family_room_amp
     - media_player.the_other_one
+    - media_player.datrokudoe
 
 switches:
   name: Switches
   view: yes
   entities:
-    - switche.switch_01
-    - switche.switch_02
-    - switche.switch_03
-    - switche.switch_04
-    - switche.switch_05
+    - switch.switch_01
+    - switch.switch_02
+    - switch.switch_03
+    - switch.switch_04
+    - switch.switch_05
