@@ -16,6 +16,7 @@
       command_off: /home/homeassistant/433Utils/RPi_utils/codesend 1070860 1 180
 
     switch_04:
+      friendly_name: Front Room Audio
       command_on: /home/homeassistant/433Utils/RPi_utils/codesend 1072387 1 180
       command_off: /home/homeassistant/433Utils/RPi_utils/codesend 1072396 1 180
 

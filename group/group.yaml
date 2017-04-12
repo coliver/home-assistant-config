@@ -31,7 +31,6 @@ media:
     - media_player.datrokudoe
 
 switches:
-  name: Switches
   view: yes
   entities:
     - switch.switch_01

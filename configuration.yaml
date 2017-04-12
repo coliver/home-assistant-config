@@ -60,37 +60,4 @@ group: !include_dir_merge_named group
 
 switch: !include_dir_merge_list switch
 
-#automation: !include_dir_merge_list automation
-
-automation:
-  - alias: Turn off humidifier in the morning
-    trigger:
-      platform: time
-      after: '07:30:00'
-    action:
-      service: switch.turn_off
-      entity_id: switch.switch_02
-
-  - alias: Turn on humidifier at night
-    trigger:
-      platform: time
-      after: '19:30:00'
-    action:
-      service: switch.turn_on
-      entity_id: switch.switch_02
-
-  - alias: Turn on entertainment center in the morning
-    trigger:
-      platform: time
-      after: '08:00:00'
-    action:
-      service: switch.turn_on
-      entity_id: switch.switch_05
-
-  - alias: Turn off entertainment center at night
-    trigger:
-      platform: time
-      after: '01:00:00'
-    action:
-      service: switch.turn_off
-      entity_id: switch.switch_05
+automation: !include_dir_merge_list automation
