@@ -19,11 +19,11 @@
     platform: time
     after: '03:00:00'
   action:
-    service: switch.turn_off
-    entity_id: switch.switch_01 # Kitchen Audio
-    service: switch.turn_off
-    entity_id: switch.switch_03 # Bedroom Entertainment Center
-    service: switch.turn_off
-    entity_id: switch.switch_04 # Front Room Audio
-    service: switch.turn_off
-    entity_id: switch.switch_05 # Den Entertainment Center
+    - service: switch.turn_off
+      entity_id: switch.switch_01 # Kitchen Audio
+    - service: switch.turn_off
+      entity_id: switch.switch_03 # Bedroom Entertainment Center
+    - service: switch.turn_off
+      entity_id: switch.switch_04 # Front Room Audio
+    - service: switch.turn_off
+      entity_id: switch.switch_05 # Den Entertainment Center
