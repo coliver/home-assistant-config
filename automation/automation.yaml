@@ -22,8 +22,17 @@
     - service: switch.turn_off
       entity_id: switch.switch_01 # Kitchen Audio
     - service: switch.turn_off
-      entity_id: switch.switch_03 # Bedroom Entertainment Center
-    - service: switch.turn_off
       entity_id: switch.switch_04 # Front Room Audio
     - service: switch.turn_off
       entity_id: switch.switch_05 # Den Entertainment Center
+
+# Attic Fan
+- alias: Turn on attic fan when inside temp is less than outside temp
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.dark_sky_temperature
+    value_template: "{{ sensor.dark_sky_temperature - climate.downstairs.current_temperature }}"
+    above:  1
+  action:
+    service: switch.turn_on
+    entity_id: switch.switch_03 # Attic Fan

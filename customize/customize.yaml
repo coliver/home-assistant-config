@@ -23,20 +23,17 @@ sensor.dark_sky_cloud_coverage:
   hidden: False
   icon: mdi:weather-partlycloudy
 
-
 sensor.dark_sky_humidity:
   friendly_name: 'Outdoor Humidity'
   emulated_hue: False
   hidden: False
   icon: mdi:water-percent
 
-
 sensor.dark_sky_minutely_summary:
   friendly_name: 'Current Conditions'
   emulated_hue: False
   hidden: True
   icon: mdi:beach
-
 
 sensor.dark_sky_precip_intensity:
   friendly_name: 'Rainfall'
